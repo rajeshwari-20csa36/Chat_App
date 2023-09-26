@@ -1,0 +1,10 @@
+<%= form_tag user_search_path, method: :get, class: 'search-form' do %>
+  <div class="input-group mb-3">
+    <%= text_field_tag :email, params[:email], class: 'form-control', placeholder: 'Enter user email' %>
+    <div class="input-group-append">
+      <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+        <%= image_tag 'search.png', alt: 'Search', class: 'search-icon' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
