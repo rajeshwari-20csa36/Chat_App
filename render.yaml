@@ -1,0 +1,18 @@
+databases:
+  - name: Chat_Application
+    databaseName: chat_application_8ac6
+    user:  chat_application_8ac6_user
+
+services:
+  - type: web
+    name: ChatApp
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: Chat_Application
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
