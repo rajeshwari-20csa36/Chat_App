@@ -71,3 +71,5 @@ group :test do
 
 end
 gem "devise"
+gem "rspec-rails", :group => [:test, :development]
+gem 'rails-controller-testing'

@@ -2,8 +2,8 @@
   <h1 class="mt-4">User Search Results</h1>
 
   <% if @searched_user %>
-    <div class="user-search-container"> <!-- Add the custom class here -->
-      <h2 class="user-details-heading">User Details</h2> <!-- Add the custom class here -->
+    <div class="user-search-container">
+      <h2 class="user-details-heading">User Details</h2>
       <p>Name: <%= @searched_user.first_name %> <%= @searched_user.last_name %></p>
       <p>Email: <%= @searched_user.email %></p>
 
